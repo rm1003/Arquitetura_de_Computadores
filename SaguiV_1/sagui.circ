@@ -155,9 +155,6 @@
     <comp lib="0" loc="(1510,530)" name="Tunnel">
       <a name="label" val="Reg_Src"/>
     </comp>
-    <comp lib="0" loc="(1510,560)" name="Tunnel">
-      <a name="label" val="Ram_R"/>
-    </comp>
     <comp lib="0" loc="(1530,700)" name="Tunnel">
       <a name="facing" val="east"/>
       <a name="label" val="MOV_Control"/>
@@ -175,6 +172,7 @@
     <comp lib="0" loc="(1790,630)" name="Tunnel">
       <a name="label" val="ZERO"/>
     </comp>
+    <comp lib="0" loc="(1870,700)" name="Constant"/>
     <comp lib="0" loc="(1890,630)" name="Tunnel">
       <a name="facing" val="east"/>
       <a name="label" val="S2"/>
@@ -184,15 +182,11 @@
       <a name="facing" val="east"/>
       <a name="label" val="WE"/>
     </comp>
-    <comp lib="0" loc="(1890,690)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="label" val="Ram_R"/>
-    </comp>
-    <comp lib="0" loc="(1890,720)" name="Tunnel">
+    <comp lib="0" loc="(1900,730)" name="Tunnel">
       <a name="facing" val="east"/>
       <a name="label" val="CLK"/>
     </comp>
-    <comp lib="0" loc="(1890,750)" name="Tunnel">
+    <comp lib="0" loc="(1910,760)" name="Tunnel">
       <a name="facing" val="east"/>
       <a name="label" val="S1"/>
       <a name="width" val="8"/>
@@ -374,8 +368,10 @@
     <comp lib="4" loc="(500,560)" name="ROM">
       <a name="appearance" val="logisim_evolution"/>
       <a name="contents">addr/data: 8 8
-83 70 20 31 1f 0 94 e4
-c5 d1 b1 54 4c 30
+32 30 71 a0 8f 64 a0 7f
+94 a9 b6 c4 da 1 11 a0
+8c 9c 9c a0 3 da 0 da
+81 e8 58 f8 44 20
 </a>
       <a name="label" val="InstructionMemory"/>
     </comp>
@@ -417,7 +413,6 @@ c5 d1 b1 54 4c 30
     <wire from="(1360,500)" to="(1450,500)"/>
     <wire from="(1360,520)" to="(1460,520)"/>
     <wire from="(1360,540)" to="(1470,540)"/>
-    <wire from="(1360,560)" to="(1510,560)"/>
     <wire from="(1360,630)" to="(1380,630)"/>
     <wire from="(1360,650)" to="(1360,660)"/>
     <wire from="(1360,660)" to="(1370,660)"/>
@@ -462,21 +457,19 @@ c5 d1 b1 54 4c 30
     <wire from="(1550,650)" to="(1560,650)"/>
     <wire from="(1770,650)" to="(1780,650)"/>
     <wire from="(1780,630)" to="(1790,630)"/>
-    <wire from="(1780,650)" to="(1810,650)"/>
-    <wire from="(1810,650)" to="(1810,900)"/>
-    <wire from="(1810,900)" to="(2200,900)"/>
+    <wire from="(1780,650)" to="(1790,650)"/>
+    <wire from="(1790,650)" to="(1790,900)"/>
+    <wire from="(1790,900)" to="(2200,900)"/>
+    <wire from="(1870,700)" to="(1930,700)"/>
     <wire from="(1890,630)" to="(1930,630)"/>
     <wire from="(1890,660)" to="(1920,660)"/>
-    <wire from="(1890,690)" to="(1910,690)"/>
-    <wire from="(1890,720)" to="(1910,720)"/>
-    <wire from="(1890,750)" to="(1920,750)"/>
-    <wire from="(1910,690)" to="(1910,700)"/>
-    <wire from="(1910,700)" to="(1930,700)"/>
-    <wire from="(1910,710)" to="(1910,720)"/>
+    <wire from="(1900,730)" to="(1910,730)"/>
+    <wire from="(1910,710)" to="(1910,730)"/>
     <wire from="(1910,710)" to="(1930,710)"/>
+    <wire from="(1910,760)" to="(1920,760)"/>
     <wire from="(1920,660)" to="(1920,690)"/>
     <wire from="(1920,690)" to="(1930,690)"/>
-    <wire from="(1920,730)" to="(1920,750)"/>
+    <wire from="(1920,730)" to="(1920,760)"/>
     <wire from="(1920,730)" to="(1930,730)"/>
     <wire from="(1930,630)" to="(1930,650)"/>
     <wire from="(2170,670)" to="(2170,730)"/>
@@ -1263,24 +1256,22 @@ c5 d1 b1 54 4c 30
       <a name="label" val="OPCode"/>
       <a name="width" val="4"/>
     </comp>
-    <comp lib="0" loc="(610,340)" name="Splitter">
-      <a name="bit0" val="13"/>
-      <a name="bit1" val="12"/>
-      <a name="bit10" val="3"/>
-      <a name="bit11" val="2"/>
-      <a name="bit12" val="1"/>
-      <a name="bit13" val="0"/>
-      <a name="bit2" val="11"/>
-      <a name="bit3" val="10"/>
-      <a name="bit4" val="9"/>
-      <a name="bit5" val="8"/>
-      <a name="bit6" val="7"/>
-      <a name="bit7" val="6"/>
-      <a name="bit8" val="5"/>
-      <a name="bit9" val="4"/>
+    <comp lib="0" loc="(620,340)" name="Splitter">
+      <a name="bit0" val="12"/>
+      <a name="bit1" val="11"/>
+      <a name="bit10" val="2"/>
+      <a name="bit11" val="1"/>
+      <a name="bit12" val="0"/>
+      <a name="bit2" val="10"/>
+      <a name="bit3" val="9"/>
+      <a name="bit4" val="8"/>
+      <a name="bit5" val="7"/>
+      <a name="bit7" val="5"/>
+      <a name="bit8" val="4"/>
+      <a name="bit9" val="3"/>
       <a name="facing" val="south"/>
-      <a name="fanout" val="14"/>
-      <a name="incoming" val="14"/>
+      <a name="fanout" val="13"/>
+      <a name="incoming" val="13"/>
     </comp>
     <comp lib="0" loc="(750,580)" name="Splitter">
       <a name="bit0" val="2"/>
@@ -1356,25 +1347,17 @@ c5 d1 b1 54 4c 30
       <a name="label" val="Reg_Src"/>
       <a name="output" val="true"/>
     </comp>
-    <comp lib="0" loc="(760,720)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="facing" val="west"/>
-      <a name="label" val="Ram_R"/>
-      <a name="output" val="true"/>
-    </comp>
     <comp lib="4" loc="(340,280)" name="ROM">
       <a name="addrWidth" val="4"/>
       <a name="appearance" val="logisim_evolution"/>
-      <a name="contents">addr/data: 4 14
-2800 2400 1800 1000 101 4 300 5fa
-5f2 102 112 122 132 142 152 162
+      <a name="contents">addr/data: 4 13
+1400 1200 c00 800 80 2 180 2fd
+2f9 81 89 91 99 a1 a9 b1
 </a>
-      <a name="dataWidth" val="14"/>
+      <a name="dataWidth" val="13"/>
     </comp>
     <wire from="(280,290)" to="(340,290)"/>
-    <wire from="(580,340)" to="(610,340)"/>
-    <wire from="(620,360)" to="(620,720)"/>
-    <wire from="(620,720)" to="(760,720)"/>
+    <wire from="(580,340)" to="(620,340)"/>
     <wire from="(630,360)" to="(630,690)"/>
     <wire from="(630,690)" to="(760,690)"/>
     <wire from="(640,360)" to="(640,660)"/>

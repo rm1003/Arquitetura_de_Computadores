@@ -1,0 +1,37 @@
+ji 2        (jump para inst. 3) 00110010    32
+ji 0        (NOP)               00110000    30
+movh 1      (r0 = 00010000)     01110001    71
+sub r0 r0   (r0 = 0)            10100000    a0
+
+movl 255    (r0 = 0f)           10001111    8f
+movr r1 r0  (r1 = 0f)           01100100    64
+sub r0 r0   (r0 = 0)            10100000    a0
+movh 255    (r0 = f0)           01111111    7f
+
+add r1 r0   (r1 = ff)           10010100    94  
+sub r2 r1   (r2 = 1)            10101001    a9
+and r1 r2   (r1 = 1)            10110110    b6
+or r1 r0    (r1 = f1)           11000100    c4
+
+not r2 r2   (r2 = fe)           11011010    da
+brzr r0 r1  (branch se r0 == 0) 00000001    01
+brzi r0 1   (branch se r0 == 0) 00010001    11
+sub r0 r0   (r0 = 0)            10100000    a0
+
+movl 12     (r0 = c)            10001100    8c
+add r3 r0   (r3 = c)            10011100    9c
+add r3 r0   (r3 = 18)           10011100    9c
+sub r0 r0   (r0 = 0)            10100000    a0
+
+brzr r0 r3  (jump para inst.24) 00000011    03
+not r3 r3 // dentro do branch   11011010    da
+brzr r0 r0 // dentro do branch  00000000    00
+not r2 r2 // dentro do branch   11011010    da
+
+movl 1      (r0 = 1)            10000001    81
+slr r2 r0   (r2 = fc)           11101000    e8
+st r1 r0    (M[R[r0]] == R[r2]) 01010100    58
+srr r2 r0   (r2 = 7e)           11111000    f8
+
+load r2 r0  (R[r2] == M[R[r0]]) 01000100    44
+jr r0       (jump register)     00100000    20

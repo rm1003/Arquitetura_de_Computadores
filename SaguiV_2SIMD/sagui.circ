@@ -58,7 +58,7 @@
     <a name="appearance" val="logisim_evolution"/>
     <a name="circuit" val="main"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
-    <a name="simulationFrequency" val="1.0"/>
+    <a name="simulationFrequency" val="8.0"/>
     <comp lib="0" loc="(1240,1020)" name="Tunnel">
       <a name="facing" val="east"/>
       <a name="label" val="V_Rb"/>
@@ -902,14 +902,15 @@
     <comp lib="4" loc="(480,1370)" name="ROM">
       <a name="appearance" val="logisim_evolution"/>
       <a name="contents">addr/data: 8 8
-3f 49 31 4d 18 4a 5b 1b
-33 b4 a1 c9 d5 cc c8 b
-9f bc cd 9b dd b4 cd c9
-57 76 8 72 0 3b 49 18
-32 21 49 1b 55 33 df cc
-b 8b bc cd 87 c9 d5 bc
-cd 9b dd dd b4 cd 57 76
-8 72 72
+31 21 14 55 31 4d 33 22
+17 55 33 b4 a1 c9 d5 cc
+c8 b 9f bc cd 9b cd b0
+97 bc dd dd b4 cd c9 57
+76 8 72 3b 49 18 32 21
+49 1b 55 33 df cc b 8b
+bc cd 87 c9 d5 bc cd 9b
+dd dd b4 cd 57 76 8 72
+72
 </a>
     </comp>
     <comp lib="5" loc="(390,1540)" name="Button"/>
